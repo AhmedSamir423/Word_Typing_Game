@@ -15,12 +15,12 @@ To run this project, you need to have Python installed on your machine. Follow t
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your_username/word_typing_game.git
+   git clone https://github.com/AhmedSamir423/Word_Typing_Game.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd word_typing_game
+   cd Word_Typing_Game
    ```
 
 3. Install the required dependencies (if any). This project primarily uses Tkinter, which comes pre-installed with Python:
@@ -45,7 +45,8 @@ python game.py
 - If a word passes the screen without being typed, the game ends, and your final score will be displayed.
 
 ## Gameplay Screenshot
-![Gameplay Screenshot](path_to_your_screenshot.png)
+![image](https://github.com/user-attachments/assets/0bf92220-0f80-4c9c-ae57-e16ecefee23a)
+
 
 ## Code Structure
 
@@ -72,9 +73,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any inquiries, feel free to reach out to me at [your_email@example.com].
 ```
 
-### Customization
-- Replace `path_to_your_screenshot.png` with the actual path of your gameplay screenshot.
-- Update your GitHub username in the clone command.
-- Fill in your email address and any other relevant details.
-
-Let me know if you'd like to add anything specific!
