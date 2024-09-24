@@ -1,14 +1,4 @@
-import tkinter as tk
-from Word import *
+from utils import start_game
 
-window = tk.Tk()
-window.title("Moving Word")
-window.geometry("500x200")
-
-word1 = Word("Hello",window)
-word1.move_word()
-
-word2 = Word("World",window)
-word2.move_word()
-
-window.mainloop()
+if __name__ == "__main__":
+    start_game()
