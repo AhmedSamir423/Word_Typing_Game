@@ -2,6 +2,8 @@ import random
 import tkinter as tk
 from Word import Word
 
+
+score = 0
 # Load words from the dictionary file
 def load_words():
     with open("dictionary.txt", "r") as file:
@@ -10,10 +12,10 @@ def load_words():
 
 # Function to check user input
 def check_input(event, word_instances, entry,score_label):
+    global score
     user_input = entry.get()  # Get the input text from the entry
     for word in word_instances:
         if user_input == word.text:
-            global score
             score += len(user_input)
             score_label.config(text=f"Score: {score}")
             word.compare_word()  # Call compare_word for the matched word
@@ -41,7 +43,7 @@ def create_new_word(words_list, window, entry, word_instances):
     new_word = Word(random.choice(words_list), window, entry,lambda: end_game(window))
     new_word.move_word()
     word_instances.append(new_word)  # Add the new word to the list
-    window.after(3000, create_new_word, words_list, window, entry, word_instances)
+    window.after(2000, create_new_word, words_list, window, entry, word_instances)
 
 # Function to start the game
 def start_game():
@@ -55,13 +57,14 @@ def start_game():
 
     # Create an entry widget for user input
     score_label = tk.Label(window, text="Your score is :", font=("Helvetica", 16), fg="white", bg="black")
+    score_label.pack(pady=20)
     entry = tk.Entry(window)
     entry.pack(pady=20)
 
     word_instances = []
 
     # Bind the Enter key to the check_input function
-    entry.bind("<Return>", lambda event: check_input(event, word_instances, entry))
+    entry.bind("<Return>", lambda event: check_input(event, word_instances, entry,score_label=score_label))
 
     # Start creating words every 1 second
     create_new_word(words_list, window, entry, word_instances)
