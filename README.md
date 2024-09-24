@@ -62,14 +62,13 @@ word_typing_game/
 ## Contributing
 If you'd like to contribute to this project, please fork the repository and submit a pull request. Contributions, suggestions, and feedback are welcome!
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ## Acknowledgements
 - Special thanks to [Tkinter](https://docs.python.org/3/library/tkinter.html) for providing the GUI framework.
-- Thanks to [OpenAI](https://openai.com) for their assistance during development.
+
 
 ## Contact
-For any inquiries, feel free to reach out to me at [your_email@example.com].
+For any inquiries, feel free to reach out to me at AhmedSamirElboridy@gmail.com.
 ```
 
