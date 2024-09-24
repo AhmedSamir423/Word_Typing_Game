@@ -9,10 +9,13 @@ def load_words():
     return words
 
 # Function to check user input
-def check_input(event, word_instances, entry):
+def check_input(event, word_instances, entry,score_label):
     user_input = entry.get()  # Get the input text from the entry
     for word in word_instances:
         if user_input == word.text:
+            global score
+            score += len(user_input)
+            score_label.config(text=f"Score: {score}")
             word.compare_word()  # Call compare_word for the matched word
             word_instances.remove(word)  # Remove the word once matched
             break
@@ -30,7 +33,7 @@ def end_game(window):
     game_over.configure(bg="black")
     text = tk.Label(game_over, text="Game Over", font=("Helvetica", 24), fg="white", bg="black")
     text.pack(pady=20)
-    score = tk.Label(game_over, text=f"Your score is ", font=("Helvetica", 16), fg="white", bg="black")
+    score = tk.Label(game_over, text=f"Your score is {score}", font=("Helvetica", 16), fg="white", bg="black")
     score.pack(pady=10)
     game_over.after(3000, game_over.destroy)
 
@@ -51,6 +54,7 @@ def start_game():
     window.geometry("500x200")
 
     # Create an entry widget for user input
+    score_label = tk.Label(window, text="Your score is :", font=("Helvetica", 16), fg="white", bg="black")
     entry = tk.Entry(window)
     entry.pack(pady=20)
 
