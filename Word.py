@@ -4,7 +4,6 @@ import tkinter as tk
 class Word:
     def __init__(self, text, window, entry, end_game_callback) -> None:
         self.text = text
-        self.length = len(text)
         self.x_position = -100
         self.y_position = random.randint(10, 150)
         self.window = window
